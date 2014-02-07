@@ -4,6 +4,7 @@ filetype off                  " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 filetype plugin indent on 
+let g:vundle_default_git_proto = 'git'
 
 " Bundle plugins
 Bundle 'gmarik/vundle'
