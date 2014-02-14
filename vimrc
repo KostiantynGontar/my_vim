@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved
-filetype off                  " required!
+"filetype off                  " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -12,6 +12,8 @@ Bundle 'bling/vim-airline'
 Bundle 'The-NERD-tree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 't9md/vim-chef'
+
+"Bundle 'vim-ruby/vim-ruby'
 
 " Airline
 set encoding=utf-8
@@ -31,6 +33,9 @@ set autoindent
 " Status line
 set laststatus=2
 
+" Reletive Numbers
+"set number 
+
 " Search
 set showmatch 
 set hlsearch
@@ -42,6 +47,18 @@ set ignorecase
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:nerdtree_tabs_smart_startup_focus=2
+
+"Ruby filetypes
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+autocmd BufNewFile,BufRead Thorfile set filetype=ruby
+
+"Vim-ruby
+"syntax on             " Enable syntax highlighting
+"filetype on           " Enable filetype detection
+"filetype indent on    " Enable filetype-specific indenting
+"filetype plugin on    " Enable filetype-specific plugins
 
 " Chef
 au BufNewFile,BufRead */*cookbooks/*  call s:SetupChef()
