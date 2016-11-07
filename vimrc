@@ -1,17 +1,22 @@
 set nocompatible              " be iMproved
 "filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 't9md/vim-chef'
+call vundle#end()           
+
 filetype plugin indent on 
 let g:vundle_default_git_proto = 'git'
 
 " Bundle plugins
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'The-NERD-tree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 't9md/vim-chef'
+" Bundle 'gmarik/vundle'
+" Bundle 'bling/vim-airline'
+" Bundle 'The-NERD-tree'
+" Bundle 'jistr/vim-nerdtree-tabs'
+" Bundle 't9md/vim-chef'
 
 "Bundle 'vim-ruby/vim-ruby'
 
@@ -34,7 +39,7 @@ set autoindent
 set laststatus=2
 
 " Reletive Numbers
-"set number 
+"set number
 
 " Search
 set showmatch 
